@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistem Aduan ICT & Teknikal</title>
+<style>
+:root{--bg:#f5f3f8;--card:#fff;--tx:#1d1b22;--mu:#6b6776;--pr:#4b2a7b;--pr2:#e9e1f5;--bd:#ddd8e6;--ok:#1f7a4d;--wn:#b45309;--er:#b42318;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17141c;--card:#221e2b;--tx:#efecf5;--mu:#a29cb0;--pr:#b89cf0;--pr2:#352a4d;--bd:#383247;--ok:#4cc38a;--wn:#f0a24b;--er:#f27a70}}
+:root[data-theme="dark"]{--bg:#17141c;--card:#221e2b;--tx:#efecf5;--mu:#a29cb0;--pr:#b89cf0;--pr2:#352a4d;--bd:#383247;--ok:#4cc38a;--wn:#f0a24b;--er:#f27a70}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{background:var(--pr);color:#fff;padding:12px 16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+:root:not([data-theme="light"]) header{color:#17141c}
+header b{font-size:16px;display:block}header small{opacity:.85}.logo{background:#fff;border-radius:8px;padding:4px 8px;margin-bottom:8px;display:inline-block}.logo img{height:40px;max-width:100%;display:block}
+main{max-width:760px;margin:0 auto;padding:12px 12px 90px}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
+nav button{flex:1;background:none;border:0;color:var(--mu);padding:10px 4px;font:inherit;font-size:12px}
+nav button.on{color:var(--pr);font-weight:700}nav span{display:block;font-size:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}
+label{display:block;font-size:13px;color:var(--mu);margin:10px 0 3px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+textarea{min-height:70px}
+.btn{background:var(--pr);color:#fff;border:0;border-radius:8px;padding:11px 14px;font:inherit;font-weight:600;margin:8px 6px 0 0}
+:root:not([data-theme="light"]) .btn{color:#17141c}
+.btn.sec{background:var(--pr2);color:var(--pr)}.btn.bad{background:var(--er);color:#fff}
+.tag{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--pr2);color:var(--pr)}
+.tag.ok{color:var(--ok)}.tag.wn{color:var(--wn)}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:start}
+.mu{color:var(--mu);font-size:13px}
+.log{border-left:3px solid var(--pr2);padding-left:10px;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.stat{text-align:center}.stat b{font-size:26px;color:var(--pr);display:block}
+.bar{height:8px;background:var(--pr);border-radius:4px}
+.steps{display:flex;gap:4px;margin:8px 0}.steps i{flex:1;height:5px;border-radius:3px;background:var(--bd)}.steps i.d{background:var(--pr)}
+@media print{header,nav,.noprint{display:none!important}body{background:#fff}main{max-width:none;padding:0}#lap{border:0!important;padding:0!important}}
+#lap{background:#fff;color:#111;border:1px solid var(--bd);border-radius:12px;padding:16px;margin:10px 0}
+#lap h2{font-size:16px;text-align:center;margin:8px 0 2px}#lap p{margin:2px 0;text-align:center;font-size:13px}
+#lap table{width:100%;border-collapse:collapse;font-size:12px;margin:8px 0}#lap th,#lap td{border:1px solid #bbb;padding:4px 6px;text-align:left;vertical-align:top}#lap th{background:#eee}
+#lap .sg{display:flex;justify-content:space-between;margin-top:40px;font-size:13px}#lap .sg div{width:44%;border-top:1px solid #111;padding-top:4px}
+.tw{overflow-x:auto}
+.warn{border:1px solid var(--wn);color:var(--wn);border-radius:10px;padding:8px 12px;margin:10px 0;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="logo"><img alt="UiTM Fakulti Pengurusan Hotel dan Pelancongan" src="data:image/jpeg;base64,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"></div><b>Sistem Aduan Sokongan ICT & Teknikal</b><small>Laptop • Internet • Peralatan PdP</small><small id="st" style="display:block;margin-top:2px"></small></header>
+<main id="app"></main>
+<nav id="nav"></nav>
+<script>
+"use strict";
+const KAT=["Laptop","Internet","LCD Projector / TV","Speaker / Audio","Lain-lain PdP"];
+const JENIS=["Pensyarah","Pelajar","Staf"],SAL=["Terus","Telefon","Lain-lain"];
+const ST={baru:"Aduan Diterima",periksa:"Pemeriksaan",susulan:"Tindakan Susulan",sahkan:"Menunggu Pengesahan",tutup:"Ditutup"};
+const ORD=["baru","periksa","susulan","sahkan","tutup"];
+let D=[],view="list",cur=null,q="",fs="",fd="",ft="",LIM=100,busy=false,idb=null,mode="idb";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const now=()=>new Date().toISOString(),pad=n=>String(n).padStart(2,"0");
+const ym=(d=new Date())=>d.getFullYear()+"-"+pad(d.getMonth()+1),ymOf=t=>ym(new Date(t));
+const ymd=t=>{const d=new Date(t);return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())};
+const fmt=t=>{const d=new Date(t);return isNaN(d)?"-":d.toLocaleString("ms-MY",{dateStyle:"medium",timeStyle:"short"})};
+const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}},lsSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+const lsRead=()=>{try{const a=JSON.parse(lsGet("aduan")||"[]");return Array.isArray(a)?a:[]}catch(e){return[]}};
+function setSt(t,bad){const e=$("st");if(e){e.textContent=t;e.style.color=bad?"#ffb4a8":""}}
+
+/* ---------- storan: IndexedDB (pantas, per-rekod) dengan sandaran localStorage ---------- */
+function openDB(){return new Promise((res,rej)=>{if(!window.indexedDB)return rej(new Error("tiada IndexedDB"));
+ const r=indexedDB.open("aduan-ict",1);r.onupgradeneeded=()=>r.result.createObjectStore("aduan",{keyPath:"id"});
+ r.onsuccess=()=>{r.result.onversionchange=()=>r.result.close();res(r.result)};r.onerror=()=>rej(r.error);r.onblocked=()=>rej(new Error("disekat"))})}
+const tx=(m,fn)=>new Promise((res,rej)=>{const t=idb.transaction("aduan",m);let o;try{o=fn(t.objectStore("aduan"))}catch(e){return rej(e)}
+ t.oncomplete=()=>res(o&&o.result!==undefined?o.result:undefined);t.onerror=()=>rej(t.error);t.onabort=()=>rej(t.error||new Error("dibatalkan"))});
+const dbAll=async()=>mode=="idb"?tx("readonly",s=>s.getAll()):lsRead();
+async function dbPut(recs){if(mode=="idb")return tx("readwrite",s=>{recs.forEach(r=>s.put(r))});
+ const m=new Map(D.map(r=>[r.id,r]));recs.forEach(r=>m.set(r.id,r));localStorage.setItem("aduan",JSON.stringify([...m.values()]))}
+async function dbDel(id){if(mode=="idb")return tx("readwrite",s=>{s.delete(id)});localStorage.setItem("aduan",JSON.stringify(D.filter(r=>r.id!=id)))}
+async function persist(fn){try{await fn();setSt("✓ Disimpan "+new Date().toLocaleTimeString("ms-MY",{timeStyle:"short"}));return true}
+ catch(e){setSt("⚠ Gagal simpan",true);alert("Gagal menyimpan pada peranti"+(e&&e.name=="QuotaExceededError"?": ruang penuh":"")+". Tekan Laporan > Sandar (JSON) sekarang.");return false}}
+
+/* ---------- pengesahan data ---------- */
+function norm(a){if(!a||typeof a!="object")return null;const id=String(a.id||"");if(!/^ADU-\d{4}-\d{3,}$/.test(id))return null;
+ const S=(v,n)=>String(v==null?"":v).slice(0,n||500),ok=t=>t&&!isNaN(new Date(t)),t=ok(a.t)?String(a.t):now();
+ const r={id,t,s:ORD.includes(a.s)?a.s:"baru",jenis:S(a.jenis,30),nama:S(a.nama,120),lokasi:S(a.lokasi,120),saluran:S(a.saluran,30),kat:S(a.kat,60),alat:S(a.alat,120),masalah:S(a.masalah,1000),
+  log:(Array.isArray(a.log)?a.log:[]).filter(l=>l&&typeof l.x=="string").map(l=>({t:ok(l.t)?String(l.t):t,x:l.x.slice(0,2000)}))};
+ if(ok(a.tutup))r.tutup=String(a.tutup);return r}
+function nextId(){const d=new Date(),p="ADU-"+String(d.getFullYear()).slice(2)+pad(d.getMonth()+1)+"-";let m=0;
+ D.forEach(a=>{if(a.id.startsWith(p)){const n=parseInt(a.id.slice(p.length),10);if(n>m)m=n}});return p+String(m+1).padStart(3,"0")}
+const get=id=>D.find(a=>a.id==id),tagc=s=>s=="tutup"?"ok":s=="susulan"?"wn":"";
+const H=new WeakMap(),hay=a=>{let h=H.get(a);if(!h){h=[a.id,a.nama,a.lokasi,a.kat,a.masalah,a.alat].join(" ").toLowerCase();H.set(a,h)}return h};
+
+/* ---------- navigasi (butang Back Android berfungsi) ---------- */
+function go(v,id,noPush){view=v;cur=id||null;render();scrollTo(0,0);if(!noPush)try{history.pushState({v,id:cur},"")}catch(e){}}
+addEventListener("popstate",e=>{const s=e.state||{};view=s.v||"list";cur=s.id||null;render()});
+try{history.replaceState({v:"list"},"")}catch(e){}
+function nav(){$("nav").innerHTML=[["list","📋","Senarai"],["new","➕","Aduan Baru"],["stat","📊","Statistik"],["rep","📄","Laporan"]].map(([v,i,t])=>`<button class="${view==v||(v=="list"&&view=="det")?"on":""}" onclick="go('${v}')"><span>${i}</span>${t}</button>`).join("")}
+function render(){nav();$("app").innerHTML=view=="new"?vNew():view=="det"?vDet():view=="stat"?vStat():view=="rep"?vRep():vList();if(view=="list")paintList()}
+
+/* ---------- senarai ---------- */
+function warn(){if(!D.length)return"";const b=lsGet("aduan_lastbackup");return(!b||Date.now()-new Date(b)>30*864e5)?`<div class="warn">Belum ada sandaran dalam 30 hari. Buka Laporan dan tekan “Sandar (JSON)”.</div>`:""}
+function vList(){return `${warn()}<div class="card"><input id="sq" aria-label="Cari" placeholder="Cari nama / lokasi / ID…" value="${esc(q)}" oninput="onQ(this.value)">
+<select aria-label="Tapis status" onchange="fs=this.value;LIM=100;paintList()" style="margin-top:8px"><option value="">Semua status</option>${ORD.map(s=>`<option value="${s}" ${fs==s?"selected":""}>${ST[s]}</option>`).join("")}</select>
+<div class="grid" style="margin-top:8px"><div><label for="fd" style="margin-top:0">Dari tarikh</label><input id="fd" type="date" value="${esc(fd)}" onchange="fd=this.value;LIM=100;paintList()"></div>
+<div><label for="ft" style="margin-top:0">Hingga tarikh</label><input id="ft" type="date" value="${esc(ft)}" onchange="ft=this.value;LIM=100;paintList()"></div></div>
+<div><button class="btn sec" onclick="rng('hari')">Hari ini</button><button class="btn sec" onclick="rng('minggu')">7 hari</button><button class="btn sec" onclick="rng('bulan')">Bulan ini</button><button class="btn sec" onclick="rng('')">Kosongkan tarikh</button></div></div><div id="lst"></div>`}
+function rng(k){const n=new Date();ft=ymd(n);
+ if(k=="hari")fd=ft;else if(k=="minggu"){const d=new Date(n);d.setDate(d.getDate()-6);fd=ymd(d)}
+ else if(k=="bulan")fd=ym(n)+"-01";else{fd="";ft=""}LIM=100;render()}
+let qt;function onQ(v){q=v;LIM=100;clearTimeout(qt);qt=setTimeout(paintList,120)}
+const card=a=>`<div class="card" role="button" tabindex="0" onclick="go('det','${esc(a.id)}')" onkeydown="if(event.key=='Enter')go('det','${esc(a.id)}')"><div class="row"><b>${esc(a.id)}</b><span class="tag ${tagc(a.s)}">${ST[a.s]}</span></div><div>${esc(a.kat)} — ${esc(a.masalah.slice(0,80))}</div><div class="mu">${esc(a.nama)} (${esc(a.jenis)}) • ${esc(a.lokasi)} • ${fmt(a.t)}</div></div>`;
+function paintList(){const el=$("lst");if(!el)return;const ql=q.trim().toLowerCase();
+ let lo=fd,hi=ft;if(lo&&hi&&lo>hi)[lo,hi]=[hi,lo];
+ const L=D.filter(a=>(!fs||a.s==fs)&&(!ql||hay(a).includes(ql))&&(!lo||ymd(a.t)>=lo)&&(!hi||ymd(a.t)<=hi)).sort((a,b)=>a.t<b.t?1:a.t>b.t?-1:0);
+ el.innerHTML=(D.length?`<p class="mu">${L.length} aduan ditemui</p>`:"")+(L.length?L.slice(0,LIM).map(card).join("")+(L.length>LIM?`<button class="btn sec" onclick="LIM+=100;paintList()">Papar lagi (${L.length-LIM})</button>`:""):`<p class="mu" style="text-align:center;margin-top:40px">${D.length?"Tiada padanan.":"Tiada aduan. Tekan “Aduan Baru”."}</p>`)}
+
+/* ---------- aduan baru ---------- */
+const opt=A=>A.map(o=>`<option>${o}</option>`).join("");
+function vNew(){return `<div class="card"><b>1. Terima &amp; Rekod Aduan</b>
+<label for="jenis">Jenis pengadu</label><select id="jenis">${opt(JENIS)}</select>
+<label for="nama">Nama</label><input id="nama" maxlength="120" autocomplete="off">
+<label for="lokasi">Lokasi (bilik / dewan)</label><input id="lokasi" maxlength="120" autocomplete="off">
+<label for="saluran">Saluran aduan</label><select id="saluran">${opt(SAL)}</select>
+<label for="kat">Kategori masalah</label><select id="kat">${opt(KAT)}</select>
+<label for="alat">Peralatan (model / no. aset)</label><input id="alat" maxlength="120" autocomplete="off">
+<label for="masalah">Masalah</label><textarea id="masalah" maxlength="1000"></textarea>
+<button class="btn" id="sv" onclick="addA()">Simpan Aduan</button></div>`}
+async function addA(){if(busy)return;const g=i=>$(i).value.trim();
+ if(!g("nama")||!g("lokasi")||!g("masalah")){alert("Sila isi nama, lokasi dan masalah.");return}
+ busy=true;$("sv").disabled=true;let ok=false,rec;
+ try{rec=norm({id:nextId(),t:now(),jenis:g("jenis"),nama:g("nama"),lokasi:g("lokasi"),saluran:g("saluran"),kat:g("kat"),alat:g("alat"),masalah:g("masalah"),s:"baru",log:[{t:now(),x:"Aduan diterima & direkod ("+g("saluran")+")"}]});
+  ok=await persist(()=>dbPut([rec]));if(ok)D.push(rec)}
+ finally{busy=false;const b=$("sv");if(b)b.disabled=false}
+ if(ok)go("det",rec.id)}
+
+/* ---------- butiran & aliran kerja ---------- */
+function vDet(){const a=get(cur);if(!a)return `<button class="btn sec" onclick="go('list')">← Senarai</button><p class="mu">Aduan tidak ditemui.</p>`;
+ const i=ORD.indexOf(a.s),id=esc(a.id);let act="";
+ if(a.s=="baru")act=`<button class="btn" onclick="push('${id}','periksa','Pegawai mula pemeriksaan di lokasi')">Mula Pemeriksaan di Lokasi</button>`;
+ if(a.s=="periksa")act=`<label for="dap">Dapatan pemeriksaan / troubleshooting</label><textarea id="dap"></textarea>
+<b style="display:block;margin-top:12px">Boleh diselesaikan di lokasi?</b>
+<label for="tin">YA — tindakan (baiki / konfigurasi / tukar kabel atau aksesori)</label><textarea id="tin"></textarea>
+<button class="btn" onclick="ya('${id}')">YA — Selesai di lokasi</button>
+<label for="rj">TIDAK — rujuk kepada</label><select id="rj"><option>Alat ganti</option><option>Vendor</option><option>Unit ICT</option><option>Unit Teknikal</option></select>
+<button class="btn sec" onclick="tidak('${id}')">TIDAK — Tindakan susulan</button>`;
+ if(a.s=="susulan")act=`<label for="cat">Catatan tindakan susulan</label><textarea id="cat"></textarea><button class="btn" onclick="sel('${id}')">Masalah selesai / peralatan boleh digunakan</button>`;
+ if(a.s=="sahkan")act=`<p class="mu">Pensyarah / pelajar / staf mengesahkan tindakan.</p><button class="btn" onclick="push('${id}','tutup','Pengadu mengesahkan masalah selesai. Aduan ditutup & rekod disimpan')">Pengadu Sahkan — Tutup Aduan</button><button class="btn bad" onclick="push('${id}','periksa','Pengadu tidak berpuas hati — pemeriksaan semula')">Belum Selesai</button>`;
+ return `<button class="btn sec" onclick="history.length>1?history.back():go('list')">← Senarai</button>
+<div class="card"><div class="row"><b>${id}</b><span class="tag ${tagc(a.s)}">${ST[a.s]}</span></div>
+<div class="steps">${ORD.map((s,k)=>`<i class="${k<=i?"d":""}"></i>`).join("")}</div>
+<div><b>${esc(a.kat)}</b> — ${esc(a.masalah)}</div>
+<p class="mu">${esc(a.nama)} (${esc(a.jenis)}) • ${esc(a.lokasi)}<br>Saluran: ${esc(a.saluran)} • Peralatan: ${esc(a.alat||"-")}<br>${fmt(a.t)}</p></div>
+${act?`<div class="card">${act}</div>`:""}
+<div class="card"><b>Rekod Tindakan</b>${a.log.map(l=>`<div class="log">${esc(l.x)}<div class="mu">${fmt(l.t)}</div></div>`).join("")}
+<button class="btn bad" onclick="del('${id}')" style="margin-top:14px">Padam</button></div>`}
+async function push(id,s,x){const i=D.findIndex(a=>a.id==id);if(i<0||busy)return;busy=true;
+ try{const b=JSON.parse(JSON.stringify(D[i]));if(s)b.s=s;b.log.push({t:now(),x});if(s=="tutup")b.tutup=now();
+  if(await persist(()=>dbPut([b])))D[i]=b}finally{busy=false}render()}
+function ya(id){const d=$("dap").value.trim(),t=$("tin").value.trim();if(!t){alert("Isi tindakan yang dibuat.");return}push(id,"sahkan",`Pemeriksaan: ${d||"-"}. Diselesaikan di lokasi: ${t}. Diuji semula & berfungsi`)}
+function tidak(id){const d=$("dap").value.trim();push(id,"susulan",`Pemeriksaan: ${d||"-"}. Tidak dapat diselesaikan di lokasi — dirujuk kepada ${$("rj").value}`)}
+function sel(id){const c=$("cat").value.trim();push(id,"sahkan","Tindakan susulan selesai: "+(c||"-")+". Peralatan boleh digunakan")}
+async function del(id){if(busy||!confirm("Padam aduan "+id+"?"))return;busy=true;
+ try{if(await persist(()=>dbDel(id)))D=D.filter(a=>a.id!=id)}finally{busy=false}go("list")}
+
+/* ---------- statistik & laporan ---------- */
+const cnt=(L,f)=>L.filter(f).length;
+function vStat(){const m=ym(),M=D.filter(a=>ymOf(a.t)==m),mx=Math.max(1,...KAT.map(k=>cnt(M,a=>a.kat==k)));
+ return `<div class="card"><b>Statistik Bulan Ini (${m})</b><div class="grid" style="margin-top:10px">
+<div class="stat"><b>${M.length}</b>Jumlah</div><div class="stat"><b>${cnt(M,a=>a.s=="tutup")}</b>Ditutup</div>
+<div class="stat"><b>${cnt(D,a=>a.s!="tutup")}</b>Belum tutup</div><div class="stat"><b>${cnt(M,a=>a.log.some(l=>l.x.includes("dirujuk")))}</b>Susulan</div></div></div>
+<div class="card"><b>Mengikut Kategori</b>${KAT.map(k=>{const n=cnt(M,a=>a.kat==k);return `<div style="margin-top:10px"><div class="row"><span>${k}</span><span>${n}</span></div><div class="bar" style="width:${n/mx*100}%"></div></div>`}).join("")}</div>`}
+let R={m:ym(),k:"",s:""};
+const hari=ms=>{const h=ms/36e5;return h<24?h.toFixed(1)+" jam":(h/24).toFixed(1)+" hari"};
+const repL=()=>D.filter(a=>(!R.m||ymOf(a.t)==R.m)&&(!R.k||a.kat==R.k)&&(!R.s||a.s==R.s)).sort((a,b)=>a.t<b.t?-1:a.t>b.t?1:0);
+function vRep(){const L=repL(),T=L.filter(a=>a.tutup),avg=T.length?hari(T.reduce((x,a)=>x+(new Date(a.tutup)-new Date(a.t)),0)/T.length):"-";
+ const lg=document.querySelector(".logo img"),logo=lg?lg.src:"",lb=lsGet("aduan_lastbackup");
+ return `<div class="card noprint"><b>Jana Laporan</b>
+<label for="rm">Bulan (kosongkan untuk semua tempoh)</label><input id="rm" type="month" value="${esc(R.m)}" onchange="R.m=this.value;render()">
+<label for="rk">Kategori</label><select id="rk" onchange="R.k=this.value;render()"><option value="">Semua</option>${KAT.map(k=>`<option ${R.k==k?"selected":""}>${k}</option>`).join("")}</select>
+<label for="rs">Status</label><select id="rs" onchange="R.s=this.value;render()"><option value="">Semua</option>${ORD.map(x=>`<option value="${x}" ${R.s==x?"selected":""}>${ST[x]}</option>`).join("")}</select>
+<button class="btn" onclick="print()">🖨️ Cetak / Simpan PDF</button><button class="btn sec" onclick="dlCsv()">⬇️ Muat turun CSV</button></div>
+<div id="lap"><div style="text-align:center"><img src="${logo}" style="height:44px" alt=""></div><h2>LAPORAN ADUAN SOKONGAN ICT DAN TEKNIKAL</h2>
+<p>Tempoh: ${esc(R.m||"Semua tempoh")}${R.k?" • "+esc(R.k):""}${R.s?" • "+ST[R.s]:""}</p><p>Dijana: ${fmt(now())}</p>
+<table><tr><th>Jumlah aduan</th><th>Ditutup</th><th>Belum tutup</th><th>Tindakan susulan</th><th>Purata masa selesai</th></tr>
+<tr><td>${L.length}</td><td>${T.length}</td><td>${L.length-T.length}</td><td>${cnt(L,a=>a.log.some(l=>l.x.includes("dirujuk")))}</td><td>${avg}</td></tr></table>
+<table><tr><th>Kategori</th><th>Bil.</th></tr>${KAT.map(k=>`<tr><td>${k}</td><td>${cnt(L,a=>a.kat==k)}</td></tr>`).join("")}</table>
+<div class="tw"><table><tr><th>#</th><th>ID</th><th>Tarikh</th><th>Pengadu</th><th>Lokasi</th><th>Kategori</th><th>Masalah</th><th>Status</th><th>Ditutup</th></tr>
+${L.map((a,i)=>`<tr><td>${i+1}</td><td>${esc(a.id)}</td><td>${fmt(a.t)}</td><td>${esc(a.nama)} (${esc(a.jenis)})</td><td>${esc(a.lokasi)}</td><td>${esc(a.kat)}</td><td>${esc(a.masalah)}</td><td>${ST[a.s]}</td><td>${a.tutup?fmt(a.tutup):"-"}</td></tr>`).join("")||'<tr><td colspan="9">Tiada rekod.</td></tr>'}</table></div>
+<div class="sg"><div>Disediakan oleh<br><b>ABDUL RAHMAN KAMARUN</b><br>Penolong Pegawai Teknologi Maklumat<br>No. Pekerja: 187897<br>Unit: ICT FPHP</div><div>Disemak oleh<br><b>NORAZLINA BINTI MAHAT</b><br>Timbalan Pendaftar Kanan<br>Fakulti Pengurusan Hotel dan Pelancongan UiTM Puncak Alam<br></div></div></div>
+<div class="card noprint"><b>Sandaran data</b><p class="mu">Sandaran terakhir: ${lb?fmt(lb):"belum pernah"}. Simpan salinan rekod pada peranti dan pulihkan jika tukar peranti atau data terpadam.</p>
+<button class="btn sec" onclick="dlJson()">💾 Sandar (JSON)</button>
+<label for="pf">Pulih daripada fail sandaran</label><input id="pf" type="file" accept=".json,application/json" onchange="pulih(this.files[0])"></div>`}
+function dl(name,text,type){try{const u=URL.createObjectURL(new Blob([text],{type})),a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500);return true}
+ catch(e){try{navigator.clipboard.writeText(text);alert("Muat turun tidak disokong di sini. Kandungan disalin ke papan klip.")}catch(x){prompt("Salin:",text)}return false}}
+const cell=v=>{v=String(v==null?"":v);if(/^[=+\-@\t\r]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"'};
+function dlCsv(){const r=[["ID","Tarikh","Jenis","Nama","Lokasi","Saluran","Kategori","Peralatan","Masalah","Status","Ditutup"]].concat(repL().map(a=>[a.id,a.t,a.jenis,a.nama,a.lokasi,a.saluran,a.kat,a.alat,a.masalah,ST[a.s],a.tutup||""]));
+ dl("laporan-aduan-"+(R.m||"semua")+".csv","\ufeff"+r.map(x=>x.map(cell).join(",")).join("\r\n"),"text/csv;charset=utf-8")}
+function dlJson(){if(dl("sandaran-aduan-"+now().slice(0,10)+".json",JSON.stringify(D),"application/json")){lsSet("aduan_lastbackup",now());render()}}
+function pulih(f){if(!f)return;const r=new FileReader();r.onerror=()=>alert("Fail tidak dapat dibaca.");
+ r.onload=async()=>{let A;try{A=JSON.parse(r.result)}catch(e){alert("Fail sandaran tidak sah.");return}
+  if(!Array.isArray(A)){alert("Fail sandaran tidak sah.");return}
+  const have=new Set(D.map(a=>a.id)),add=[];let bad=0;
+  A.forEach(x=>{const n=norm(x);if(!n)bad++;else if(!have.has(n.id)){have.add(n.id);add.push(n)}});
+  if(add.length&&!(await persist(()=>dbPut(add))))return;
+  D=D.concat(add);alert(add.length+" rekod dipulihkan"+(bad?", "+bad+" rekod tidak sah diabaikan":"")+".");render()};
+ r.readAsText(f)}
+
+/* ---------- mula ---------- */
+(async()=>{render();setSt("Memuatkan…");
+ try{idb=await openDB()}catch(e){mode="ls"}
+ try{D=(await dbAll()).map(norm).filter(Boolean);
+  if(mode=="idb"&&!lsGet("aduan_migrated")){const have=new Set(D.map(a=>a.id)),old=lsRead().map(norm).filter(a=>a&&!have.has(a.id));
+   if(old.length){await dbPut(old);D=D.concat(old)}lsSet("aduan_migrated","1")}
+  setSt(mode=="idb"?"✓ Storan pantas (IndexedDB)":"Storan asas (localStorage)")}
+ catch(e){setSt("⚠ Gagal membaca data",true)}
+ render();try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}})();
+</script>
+</body>
+</html>
